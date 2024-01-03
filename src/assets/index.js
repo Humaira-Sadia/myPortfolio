@@ -27,6 +27,9 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.png";
+import sumz from "./sumz.png";
+import sudoku from "./sudoku.png";
+import bg_main from "./bg_main.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
@@ -59,4 +62,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  sumz,
+  sudoku,
+  bg_main,
 };

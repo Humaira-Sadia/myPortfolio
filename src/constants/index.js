@@ -21,6 +21,8 @@ import {
   jobit,
   tripguide,
   threejs,
+  sumz,
+  sudoku,
   
 } from "../assets";
 
@@ -232,7 +234,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: sumz,
     source_code_link: "https://github.com/Humaira-Sadia/Summarizer.git",
     liveDemo: "https://humaira-sadia.github.io/Summarizer/",
   },
@@ -254,7 +256,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: sudoku,
     source_code_link: "https://github.com/Humaira-Sadia/Sudoku-Game..git",
     liveDemo: "https://humaira-sadia.github.io/Sudoku-Game./",
   },
