@@ -2,10 +2,6 @@ import { motion } from "framer-motion";
 import React from "react";
 import Tilt from "react-parallax-tilt";
 
-import { ImLinkedin2, ImFacebook, ImGithub, ImYoutube } from "react-icons/im";
-
-import { TbMailFilled } from "react-icons/tb";
-
 import { styles } from "../styles";
 import { services, socialLinks } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -47,24 +43,40 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] leading-[30px]"
       >
-        I am a software engineer with experience in building web applications
-        and mobile apps using JavaScript frameworks such as ReactJS, NodeJS,
-        Express, Django, I am a software engineer specializing in building web
-        applications and mobile apps with a focus on performance optimization.
-        My background is in computer science and mathematics I am a software
-        engineer with experience in building web applications and mobile apps
-        using JavaScript frameworks such as ReactJS and NodeJS. My expertise
-        includes I am a full stack developer with experience in building web
-        applications using JavaScript and TypeScript. My background is in
-        computer science and mathematics, which allows
+        I am a seasoned software engineer specializing in the development of
+        high-performance web applications and mobile apps. With a strong
+        foundation in computer science and mathematics, I bring a unique blend
+        of analytical skills and technical proficiency to my work. <br /> My expertise
+        lies in building robust applications using prominent JavaScript
+        frameworks, including ReactJS and NodeJS. As a full-stack developer, I
+        am adept at crafting seamless user experiences and implementing
+        innovative solutions to enhance performance optimization. <br /> Throughout my
+        career, I have successfully contributed to various projects, leveraging
+        my comprehensive knowledge of JavaScript and TypeScript. My commitment
+        to staying at the forefront of technological advancements allows me to
+        deliver cutting-edge solutions in the ever-evolving landscape of
+        software development.
       </motion.p>
       <motion.div>
-        <div className="social">
-          {socialLinks.map((social, index) => {
-            const IconComponent = social.icon; // Get the component reference
-            return <IconComponent key={index} />;
+        <ul className="social relative flex gap-5 pt-4">
+          {socialLinks.map((social) => {
+            const Icon = social.icon;
+            return (
+              <li
+                className="h-10 w-10 rounded-3xl flex flex-wrap justify-center items-center cursor-pointer trasition duration-500 hover:translate-x-0 text-center	hover:-translate-y-2 shadow-[#fff] bg-white
+                box-border "
+                key={social.id}
+              >
+                <a
+                  className="text-[1.7em] transition duration-500 "
+                  href={social.link}
+                >
+                  <Icon color={social.color} />
+                </a>
+              </li>
+            );
           })}
-        </div>
+        </ul>
       </motion.div>
       <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => (
