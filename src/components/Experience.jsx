@@ -4,8 +4,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-import { StarsCanvas } from "./canvas";
-
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -25,42 +23,49 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className='flex justify-center items-center w-full h-full'>
+        <div className="flex justify-center items-center w-full h-full">
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className='w-[60%] h-[60%] object-contain'
+            className="w-[60%] h-[60%] object-contain"
           />
         </div>
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-        <p
-          className='text-secondary text-[16px] font-semibold'
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
+        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <div className="flex flex-wrap text-secondary text-[16px] font-semibold m-0 gap-4">
+          <p>{experience.company_name}</p>
+          <a href={experience.github} className=" mt-4 green-text-gradient">
+            Github
+          </a>
+        </div>
       </div>
 
-      <ul className='mt-5 list-disc ml-5 space-y-2'>
+      <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            className="text-white-100 text-[14px] pl-1 tracking-wider"
           >
             {point}
           </li>
         ))}
       </ul>
+      <div className="mb-3 mt-2 flex flex-wrap gap-2">
+        {experience.tags.map((tag) => (
+          <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
+            #{tag.name}
+          </p>
+        ))}
+      </div>
     </VerticalTimelineElement>
   );
 };
 
 const Experience = () => {
   return (
-    <div id='work'>
+    <div id="work">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
@@ -70,7 +75,7 @@ const Experience = () => {
         </h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-col'>
+      <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard
@@ -80,7 +85,6 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-      <StarsCanvas />
     </div>
   );
 };

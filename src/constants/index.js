@@ -15,14 +15,13 @@ import {
   git,
   figma,
   docker,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   sumz,
   sudoku,
+  codeSoft,
+  sparks,
+  Quiz,
+  resume,
   
 } from "../assets";
 
@@ -161,7 +160,7 @@ const experiences = [
   {
     title: "Android App Developement Intern",
     company_name: "CodSoft",
-    icon: tesla,
+    icon: codeSoft,
     iconBg: "#E6DEDD",
     date: "Jul-2023 - Aug-2023",
     points: [
@@ -189,8 +188,8 @@ const experiences = [
   {
     title: "Web Developement and Design Intern",
     company_name: "Sparks Foundation",
-    icon: starbucks,
-    iconBg: "#383E56",
+    icon: sparks,
+    iconBg: "#E6DEDD",
     date: "Nov-2022 - Dec-2022",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -278,7 +277,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: resume,
     source_code_link: "https://github.com/Humaira-Sadia/Resume-Builder.git",
     liveDemo: "https://humaira-sadia.github.io/Resume-Builder/",
   },
@@ -300,7 +299,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: Quiz,
     source_code_link: "https://github.com/Humaira-Sadia/Quiz-App.git",
     liveDemo: "https://github.com/Humaira-Sadia/Quiz-App.git",
   },

@@ -13,14 +13,6 @@
   color-scheme: dark;
 }
 
-.hero{
-  background-image: url('./assets/bg_main.png');
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .nav-item .active{
   padding-bottom: 8px;
   text-decoration: underline;

@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { rocket, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
+      } w-full flex items-center py-5 fixed top-0 z-20 backdrop-blur-md bg-opacity-30 ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
@@ -42,7 +42,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img src={rocket} alt="logo" className="w-14 -mr-2 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex flex-wrap">
             Humaira &nbsp;
             <span className="sm:block hidden"> | Portfolio</span>
@@ -53,7 +53,7 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`nav-item`}
+              className="font-poppins font-medium cursor-pointer text-[18px] transition duration-500 hover:translate-x-0	hover:-translate-y-1 hover:scale-110 hover:underline decoration-[#ff0000] decoration-2 underline-offset-4 nav-item active"
               onClick={() => setActive(nav.title)}
             >
               <Link
@@ -80,13 +80,13 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 bg-tertiary absolute top-16 w-full h-screen   my-2 flex items-center z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className="list-none flex h-2/3 justify-around items-center flex-1 flex-col gap-4">
+            <ul className="list-none flex justify-center items-center flex-1 flex-col gap-4 bg-tertiary rounded-[20px] w-[200px] h-[200px] -mt-10 ">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  className={`font-poppins font-medium cursor-pointer text-[16px] nav-item active ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {
@@ -94,11 +94,7 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <Link
-                    to={nav.id}
-                    smooth={true}
-                    offset={-100}
-                  >{nav.title}</Link>
+                  <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
             </ul>
