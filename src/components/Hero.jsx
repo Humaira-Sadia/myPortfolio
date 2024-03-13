@@ -18,23 +18,23 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative hero w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto">
       <div className="relative flex flex-col h-full w-full">
         <video
           autoPlay
           muted
           loop
-          className="rotate-180 absolute top-[-280px] left-0 z[1] w-full h-full object-cover"
+          className="rotate-180 absolute top-[-180px] md:top-[-280px]  left-0 z[1] w-full md:h-full h-[70%] object-cover"
         >
           <source src={blackhole} />
         </video>
       </div>
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[70px] h-full max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-5`}
+        className={`${styles.paddingX} absolute inset-0 top-[100px] max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-5 min-h-full`}
       >
-        <div className="flex flex-col md:flex-row gap-2 w-full">
+        <div className="sm:px-16 px-6 h-screen max-w-7xl w-full mx-auto flex md:flex-row flex-col-reverse items-center justify-center gap-2">
           <div className="flex items-center">
-            <div className="flex flex-col justify-center items-center mt-5">
+            <div className="flex flex-col justify-center items-center mt-5 mr-2">
               <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
               <div className="w-1 sm:h-80 h-40 violet-gradient" />
             </div>
@@ -53,15 +53,15 @@ const Hero = () => {
               </h1>
 
               <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-                I develop 3D visuals,
+                I develop 3D visuals ,
                 <br className="sm:block hidden" />
-                user interfaces, and web applications
+                 user interfaces, and web applications
               </p>
             </div>
           </div>
 
           <img
-            className="h-auto max-w-full md:h-[450px] md:w-[50%] mx-auto"
+            className="blobe max-w-full h-[250px] md:h-[350px] md:flex mx-auto"
             src={hero}
             alt=""
           />

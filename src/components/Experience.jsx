@@ -34,7 +34,7 @@ const ExperienceCard = ({ experience }) => {
     >
       <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-        <div className="flex flex-wrap text-secondary text-[16px] font-semibold m-0 gap-4">
+        <div className="flex items-center flex-wrap text-secondary text-[16px] font-semibold m-0 gap-4">
           <p>{experience.company_name}</p>
           <a href={experience.github} className=" mt-4 green-text-gradient">
             Github

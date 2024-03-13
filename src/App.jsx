@@ -9,6 +9,7 @@ import {
   Tech,
   Works,
 } from "./components";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <div className="relative z-0">
           <Contact />
         </div>
+        <Footer/>
       </div>
     </BrowserRouter>
   );
