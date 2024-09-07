@@ -15,7 +15,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
-  liveDemo
+  liveDemo,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -51,10 +51,7 @@ const ProjectCard = ({
         <div className="mt-5">
           <div className="title flex items-center gap-4">
             <h3 className="text-white font-bold text-[24px]">{name}</h3>
-            <div
-              className=""
-              onClick={() => window.open(liveDemo, "_blank")}
-            >
+            <div className="" onClick={() => window.open(liveDemo, "_blank")}>
               <FaShareFromSquare className="h-6 bg-black rounded-full hover:scale-125 hover:text-blue-300 transition duration-500" />
             </div>
           </div>
@@ -97,10 +94,15 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex justify-center flex-wrap gap-7">
-        {projects.map((project, index) => (
+      <div className="mt-20 flex justify-center flex-wrap gap-7 capitalize">
+        {projects.slice(0, 6).map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
+        {/* {projects.length > 6 && (
+          <button className="mt-4 px-4 py-2 text-[#F7D0FF] font-semibold tracking-wider underline ">
+            View More
+          </button>
+        )} */}
       </div>
     </div>
   );

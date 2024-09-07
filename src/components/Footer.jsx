@@ -27,7 +27,7 @@ const Footer = () => {
       <p>
         {" "}
         © {currentYear}
-        <span className="px-2 text-[#4d8cea] font-bold">Humaira Sadia</span>|
+        <span className="px-2 text-[#ab69e9] font-bold">Humaira Sadia</span>|
         All Rights Reserved .
       </p>
     </div>

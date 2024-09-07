@@ -20,13 +20,15 @@ import {
   sudoku,
   codeSoft,
   sparks,
+  ardent,
   Quiz,
   resume,
-  
+  netflix,
+  zudio,
+  feastfi,
 } from "../assets";
 
-
-import news from '../assets/news.png'
+import news from "../assets/news.png";
 
 import { ImLinkedin2, ImFacebook, ImGithub, ImYoutube } from "react-icons/im";
 
@@ -160,6 +162,33 @@ const socialLinks = [
 
 const experiences = [
   {
+    title: "Hybrid Flutter Application Developer",
+    company_name: "Ardent Computech pvt. ltd",
+    icon: ardent,
+    iconBg: "#E6DEDD",
+    date: "Jul-2024 - Aug-2024",
+    points: [
+      "User authentication with secure login and sign-up processes.",
+      "Integrated payment gateway for smooth transactions.",
+      "Flutter, Firebase, Tailwind CSS, Dart.",
+    ],
+    tags: [
+      {
+        name: "Flutter",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Dart",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "pink-text-gradient",
+      },
+    ],
+    github: "https://github.com/Humaira-Sadia/Ardent_Humaira_Sadia",
+  },
+  {
     title: "Android App Developement Intern",
     company_name: "CodSoft",
     icon: codeSoft,
@@ -217,6 +246,74 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    name: "FeastFi",
+    description:
+      "FeastFi is a food delivery app built with Flutter and Firebase, offering a seamless, intuitive, and delightful ordering experience.",
+    tags: [
+      {
+        name: "Flutter",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Dart",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: feastfi,
+    source_code_link: "https://github.com/Humaira-Sadia/Ardent_Humaira_Sadia",
+    liveDemo: "https://github.com/Humaira-Sadia/Ardent_Humaira_Sadia",
+  },
+  {
+    name: "Zudio_Reimagined",
+    description:
+      "Create a stunning Zudio frontend replica to master React and Tailwind CSS, exploring eCommerce and seamless UX.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GSAP",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: zudio,
+    source_code_link:
+      "https://github.com/Humaira-Sadia/API-Alchemists-Reimagine-Round1",
+    liveDemo: "https://api-alchemists-reimagine-round1.vercel.app/",
+  },
+  {
+    name: "Netflix_Reimagined",
+    description:
+      "Master React and Tailwind CSS by building a stunning Netflix frontend replica for seamless UX.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GSAP",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: netflix,
+    source_code_link:
+      "https://github.com/Humaira-Sadia/API-Alchemists-Reimagine-Round2",
+    liveDemo: "https://api-alchemists-reimagine-round2.vercel.app/",
+  },
   {
     name: "Sumz",
     description:

@@ -27,12 +27,17 @@ import threejs from "./tech/threejs.svg";
 
 import sparks from "./company/sparks.png";
 import codeSoft from './company/codeSoft.png';
+import ardent from './company/ardent.png'
 
 import sumz from "./sumz.png";
 import sudoku from "./sudoku.png";
 import Quiz from './Quiz.png'
 import resume from './resume.png'
 import bg_main from "./bg_main.png";
+import netflix from "./netflix.png";
+import zudio from "./zudio.png";
+import feastfi from "./feastfi.png";
+
 
 export {
   logo,
@@ -61,9 +66,13 @@ export {
   threejs,
   codeSoft,
   sparks,
+  ardent,
   sumz,
   sudoku,
   Quiz,
   resume,
   bg_main,
+  netflix,
+  zudio,
+  feastfi,
 };
