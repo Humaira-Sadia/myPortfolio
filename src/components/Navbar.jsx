@@ -53,7 +53,7 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className="font-poppins font-medium cursor-pointer text-[18px] transition duration-500 hover:translate-x-0	hover:-translate-y-1 hover:scale-110 hover:underline decoration-[#ff0000] decoration-2 underline-offset-4 nav-item active"
+              className="font-poppins font-medium cursor-pointer text-[18px] transition duration-500 hover:translate-x-0	hover:-translate-y-1 hover:scale-110 hover:underline decoration-[#9F5DDE] decoration-2 underline-offset-4 nav-item active"
               onClick={() => setActive(nav.title)}
             >
               <Link

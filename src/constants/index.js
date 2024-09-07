@@ -26,6 +26,8 @@ import {
 } from "../assets";
 
 
+import news from '../assets/news.png'
+
 import { ImLinkedin2, ImFacebook, ImGithub, ImYoutube } from "react-icons/im";
 
 import { TbMailFilled } from "react-icons/tb";
@@ -133,7 +135,7 @@ const socialLinks = [
     id: 2,
     link: "https://github.com/Humaira-Sadia",
     icon: ImGithub,
-    color: "#32cd32",
+    color: "#007C00",
   },
   {
     id: 3,
@@ -236,6 +238,28 @@ const projects = [
     image: sumz,
     source_code_link: "https://github.com/Humaira-Sadia/Summarizer.git",
     liveDemo: "https://humaira-sadia.github.io/Summarizer/",
+  },
+  {
+    name: "NewsApp",
+    description:
+      "Stay updated with the latest daily news across various categories, including technology, sports, entertainment, and more.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "NEWSAPI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: news,
+    source_code_link: "https://github.com/Humaira-Sadia/NewsApp",
+    liveDemo: "https://news-app-indol-sigma.vercel.app/",
   },
   {
     name: "Sudoku",
